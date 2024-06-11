@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Gambling fun!</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <textarea  id="MoneyInput"> how much moneys?</textarea>
+        <textarea id="landedPin"> which pin will it be?</textarea>
+                <script>
+
+        let Moneys = 100;
+        function Gamble()
+        {
+
+           Number = Math.floor(Math.random()* 10) +1
+
+           if(Number == 1 && BettedPin == "1")
+           {
+
+                Moneys += parseInt(BettedMoney)
+                alert("you now have " + Moneys)
+
+
+           }
+           else
+           {
+
+                Alert("You lost!")
+
+           }
+            
+
+        }
+        function BetMoney()
+        {
+            var MoneyInput = document.getElementById("MoneyInput");
+            var BettedMoney = MoneyInput.value;
+            alert("you bet: " + BettedMoney + "Dollars");
+
+            
+        }
+        function betPin()
+        {
+            var WinningPin = document.getElementById("LandedPin");
+            var BettedPin = WinningPin.value;
+            alert("you bet: " + BettedPin + " is the one it will land on!");
+            
+            
+        }
+        
+
+        </script>
+
+        <button onclick="BetMoney()">"BetMoney!"</button>
+        <button onclick="betPin()">bet the Pin!</button>
+        <button onclick="Gamble()">Run the wheel</button>
+    </body>
+</html>
